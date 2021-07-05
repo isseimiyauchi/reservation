@@ -1,0 +1,36 @@
+<div class="container">
+   <div class="row">
+       <div class="border col-6 p-5">
+        <h2 class="border-bottom mb-4">予約内容確認</h2>
+
+        <h3 class="mb-4">¥<%= @reservation.total_price %> / 日</h3>
+        
+        <dl>
+            <dt>開始日</dt>
+            <dd class="mb-4"><%= @reservation.start_date %></dd>
+            <dt>終了日</dt>
+            <dd class="mb-4"><%= @reservation.end_date %></dd>
+            <dt>人数</dt>
+            <dd class="mb-4"><%= @reservation.number_of_people %>人</dd>
+            <dt>日数</dt>
+            <dd class="border-bottom mb-4"><%= @reservation.number_of_day = ( @reservation.end_date - @reservation.start_date ).to_i %>日</dd>
+            <dt>合計金額</dt>
+            <dd class="border-bottom mb-4"><%= @reservation.total_price = @reservation.total_price * @reservation.number_of_people * ( @reservation.end_date - @reservation.start_date ).to_i %>円</dd>
+        </dl>
+        
+        
+        <div class="border-top">
+            <%= form_for @reservation do |f| %>
+                <%= f.hidden_field :start_date %>
+                <%= f.hidden_field :end_date %>
+                <%= f.hidden_field :number_of_people %>
+                <%= f.hidden_field :number_of_day %>
+                <%= f.hidden_field :total_price %>
+                <%= f.hidden_field :user_id %>
+                <%= f.hidden_field :room_id %>
+                <%= f.submit '予約を確定する' %>
+            <% end %>
+        </div>
+       </div>
+   </div>
+</div>
