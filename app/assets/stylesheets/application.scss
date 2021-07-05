@@ -1,0 +1,501 @@
+@import "bootstrap";
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 180px;
+    box-sizing: border-box;
+    color: #333333;
+    height: 100%;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+ul {
+    list-style: none;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.room-posts table thead tr, .reservations table thead tr {
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.room-posts table thead th, .reservations table thead th {
+    padding: 8px 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: inherit;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+table tbody td {
+    padding: 10px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.side-menu {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+//header
+
+ .header {
+    width: 100%;
+    height: 70px;
+    padding: 4px 30px;
+    background-color: #000000;
+    display: flex;
+}
+
+.site-logo {
+    width: 230px;
+    height: 70px;
+    float: left;
+}
+
+.header-left-nav {
+   width: 600px;
+}
+
+.header-right-nav {
+    float: right;
+}
+
+.host-icon {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50px;
+    padding: .25rem!important;
+    margin-left: 1rem!important;
+}
+
+.header .nav-item {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+}
+
+.dropdown-menu-view {
+    background-color: #fff;
+    border: 3px solid #F6F8F9;
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.login-items {
+    display: flex;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    margin-top: 64px;
+    padding-top: 90px;
+    background-color: #111;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+}
+
+.device {
+    padding-top: 36px;
+    font-size: 16px;
+}
+
+.device_frame {
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    margin: 0px auto;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.device_inner {
+    width: 360px;
+    margin: 0px auto;
+}
+
+.device p {
+    font-size: 16px;
+}
+.required-b::before {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+//profile
+
+.update-view {
+    width: 100%;
+}
+
+.update-nav-mobile {
+    height: auto;
+}
+
+.update-nav {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 15px;
+}
+
+.d-none {
+    display: none!important;
+}
+
+.update-space-view {
+    background-color: #F6F8F9;
+    border-left: 2px solid #e2e2e2;
+}
+
+.update-view-box {
+    max-width: 880px;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    margin: 30px auto;
+}
+
+.update-content {
+    border-bottom: 1px solid #eaedef;
+    padding: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.required-a {
+    width: 150px;
+}
+
+.required-a::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.update-nav-mobile li {
+    float: left;
+}
+
+.update-nav li {
+    font-size: 18px;
+    padding: 10px;
+}
+
+//rooms/posts.css
+
+.room-posts {
+    max-width: 100vw;
+    padding: 30px 60px;
+}
+
+.room-posts table {
+    min-width: 800px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.room-posts table thead tr {
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+//page/index
+
+.top .top-main {
+    background-image: url(https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+}
+
+.top .form-fream {
+    height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.top .form-area {
+    background: #fff;
+    padding: 24px;
+    border-radius: 5px;
+}
+
+.top .panel-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.top span {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+.top .form-area-title {
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 1px;
+}
+
+//room/index
+
+.room {
+    width: 100%;
+    padding: 30px 60px;
+}
+
+.room-frame-inner {
+    border: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+}
+
+.room-image-out {
+    position: relative;
+    width: 100%;
+    background: #F6F8F9;
+    height: 200px;
+}
+
+.room-image {
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    top: 20px;
+    object-fit: cover;
+}
+
+.room-profile {
+    width: 100%;
+    padding: 15px;
+}
+
+.room-profile p {
+    word-break: break-all;
+}
+
+.room-profile-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #909090;
+}
+
+.room-profile-city {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.room-profile-price {
+    text-align: right;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.price-icon::before {
+    content: "￥";
+    padding-right: 3px;
+}
+
+//room/show
+
+.room-show {
+    padding: 30px 0;
+}
+
+.room-show-detile {
+    display: flex;
+}
+
+.room-show-detile-icon, .reservations-new-detile-icon {
+    padding: 10px;
+    width: 130px;
+}
+
+.host-icon {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.room-show-profile {
+    padding: 15px;
+}
+
+.room-show-profile-name {
+font-size: 18px;
+font-weight: bold;
+padding: 15px 0;
+}
+
+.room-show-profile-adress {
+    font-size: 14px;
+}
+
+.room-show-profile-content {
+    font-size: 16px;
+    line-height: 30px;
+    padding: 30px 10px;
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+    word-break: break-all;
+}
+
+.room-show-nav, .reservations-new-nav {
+    padding: 20px;
+    border: 1px solid #eaedef;
+}
+
+.room-show-date-select {
+    padding: 15px 0;
+}
+
+
+//reservation/index
+
+.posts-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #909090;
+}
+
+.posts-content {
+    max-width: 400px;
+}
+
+//room/new
+
+.room-view {
+    background-color: #F6F8F9;
+    border-left: 2px solid #e2e2e2;
+}
+
+.room-view-box {
+    max-width: 880px;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    margin: 50px auto;
+}

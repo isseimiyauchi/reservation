@@ -1,0 +1,41 @@
+<div class="container-fuild">
+  <div class="row">
+<div class="col-sm-3 col-md-2 sidebar border-right p-5">
+  <ul class="nav nav-sidebar">
+      <li class="active side-menu"><%= link_to "アカウント", controller: "users", action: "acount" %></li>
+      <li class="active side-menu"><%= link_to "プロフィール", controller: "users", action: "profile" %></li>
+  </ul>
+</div>
+      <div class="col-lg-10 p-10">
+          <div class="border p-5 m-5">
+              <div class="form-group">
+                      <h5 class="border-bottom">プロフィール</h5>
+              </div>
+              <%= form_with model: @user, url: root_path, method: 'get' do |f| %>
+                  <div class="form-group">
+                          <div class="col-md-6 offset-md-3">
+                              <div class="icon-box">
+                                  <img alt="アイコン画像" class="icon-image host-icon" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg">
+                              </div>
+                          </div>
+                  </div>
+                  <div class="form-group">
+                        <%= f.label :avatar, "アイコン画像", class: "control-label required-a" %>
+                        <%= f.file_field :avatar %>
+                  </div>
+                  <div class="form-group">
+                        <%= f.label :name, "名前", class: "control-label required-a" %><br/>
+                        <%= f.text_field :name, autofocus: true, class: "form-control" %>
+                  </div>
+                  <div class="form-group">
+                        <%= f.label :profile, "自己紹介", class: "control-label required-a" %><br/>
+                        <%= f.text_area :profile, autofocus: true, class: "form-control" %>
+                  </div>
+                  <div class="form-group">
+                        <%= f.submit "更新", class:"col-lg-2 btn-primary mx-3" %>
+                  </div>
+                  <% end %>
+           </div>
+      </div>
+   </div>
+</div>

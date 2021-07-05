@@ -11,6 +11,68 @@
   </head>
 
   <body>
+  <header class="header">
+      <div class="d-flex flex-row bd-highlight mb-3 header-nav-left">
+          <%= link_to image_tag('https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png'), '/' %>
+        <%= search_form_for @q do |f| %>
+        <div class="nav-item nav-link">
+          <%= f.search_field :room_name_cont, class: "form-control", placeholder: "キーワード" %>
+        </div>
+        <div class="nav-item nav-link">
+          <%= f.search_field :adress_cont, class: "form-control", placeholder: "エリア" %>
+        </div>
+          <%= f.submit "検索", class: "btn btn-outline-success" %>
+          <% end %>
+      </div>
+      <div class="header-right-nav">
+      <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
+      <!-- ユーザーがログインしていた時の処理 -->
+        <div class="nav-item me-2　text-right"><%= current_user.name %></div>
+          　　<div class="nav-item">
+              <div class="dropdown nav-item　text-right">
+                <img  class="p-1 mx-3 host-icon" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg" alt="" width="57" height="57">
+              <ul class="dropdown-menu-view">
+                <li><%= link_to "ルーム登録", new_room_path %></li>
+                <li><%= link_to "予約済みルーム一覧", :reservations %></li>
+                <li><%= link_to "登録済みルーム一覧", posts_rooms_path %></li>
+                <li><%= link_to "設定", user_profile_path(current_user) %></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              </ul>
+          　　</div>
+            </div>          
+      <% else %>
+      <!-- ユーザーがログインしていなかった時の処理 -->
+      <div class="login-items">
+          <%= button_to "ログイン", new_user_session_path, class: 'btn btn-primary', method: :get %> <!-- ログイン画面に移行する -->
+          <%= button_to "新規登録", new_user_registration_path, class: 'btn btn-secondary', method: :get %> <!-- 新規登録画面に移行する -->
+      <% end %>
+    </div>
+       <script type="text/javascript">
+        $(function(){
+          $('.dropdown').find('.dropdown-menu-view').hide();
+  
+        $('.dropdown').hover(function(){
+          $(".dropdown-menu-view:not(:animated)", this).slideDown();
+          }, function(){
+          $(".dropdown-menu-view",this).slideUp();
+        });
+        });
+       </script>
+   </div>
+    </header>
+    <% if flash[:notice] %>
+  <div class="flash-box">
+    <p class="flash contents-width"><%= flash[:notice] %></p>
+  </div>
+  <% end %>
+  <% if flash[:alert] %>
+  <div class="flash-box">
+    <p class="flash contents-width"><%= flash[:alert] %></p>
+  </div>
+  <% end %>
     <%= yield %>
+    <footer class="footer">
+      <p>© 2020 POTEPAN.INC.</p>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,18 @@
+<div class="container">
+    <h4 class="pb-4">検索結果: <%= @search_room.count %></h4>
+    <div class="row">
+    　　<% @search_room.each do |room| %>
+      <div class="col-md-3">
+        <div class="card my-3" style="width: 18rem">
+          <%= image_tag room.image.variant(resize:'350x180'), class: "card-img-top" %>
+          <div class="card-body">
+            <h4 class="card-title room-profile-name"><%= room.room_name %></h5>
+            <p class="room-profile-city"><%= room.adress %></p>
+            <p class="room-profile-price price-icon"><%= room.price %></p>
+            <%= link_to "詳細", room %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>

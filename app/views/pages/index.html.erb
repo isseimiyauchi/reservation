@@ -1,0 +1,47 @@
+<div class="top">
+    <div class="top-main">
+        <div class="container">
+            <div class="row col-lg-6">
+                <div class="form-fream">
+                    <div class="form-area">
+                        <p class="form-area-title mb-4">Potepan Shareでまだ体験したことのない旅をしよう</p>
+                        <%= search_form_for @q do |f| %>
+                
+                            <%= f.label :adress, "エリア" %>
+                            <%= f.search_field :adress_cont, class: "form-control　mb-4", placeholder: "東京" %>
+                    
+                            <%= f.submit "検索", class: "form-control btn-primary mb-4" %>
+                            <% end %>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel-area m-5">
+            <h1 class="section-title">おすすめのエリア</h1>
+            <div class="row">
+                <div class="panel-item col-lg-3 col-6">
+                    <span>東京</span>
+                    <img class="panel-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_tokyo.jpg" width　= "282px" height = "360px">
+                    <div class="shadow"></div>
+                </div>
+                <div class="panel-item col-lg-3 col-6">
+                    <span>大阪</span>
+                    <img class="panel-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_osaka.jpg" width　= "282" height = "360">
+                    <div class="shadow"></div>
+                </div>
+                <div class="panel-item col-lg-3 col-6">
+                    <span>京都</span>
+                    <img class="panel-image shadow" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_kyoto.jpg" width　= "282" height = "360">
+                    <div class="shadow"></div>
+                </div>
+                <div class="panel-item col-lg-3 col-6">
+                    <span>札幌</span>
+                    <img class="panel-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_sapporo.jpg" width　= "282" height = "360">
+                    <div class="shadow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
