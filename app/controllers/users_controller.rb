@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def profile
-    @user = current_user 
+    @user = current_user
   end
 
   def acount
@@ -9,11 +9,11 @@ class UsersController < ApplicationController
 
     
   def update
-    if currrent_user.update(user_params)
-        redirect_to root_path
+    if @user.save!
+      redirect_to root_path
     else
-       render :acount
-      end
+      render :profile
+    end
   end
   
 
@@ -26,5 +26,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :name, :profile, :avatar)
   end
+
 
 end

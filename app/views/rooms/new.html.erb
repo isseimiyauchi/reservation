@@ -12,7 +12,7 @@
                     <div>
                         <h3>ルーム情報登録</h3>
                     </div>
-                    <%= form_with model: @room, url: posts_rooms_path, local: true do |f| %>
+                    <%= form_with model: Room.new do |f| %>
                       <table>
                         <div class="form-group">
                                   <%= f.label :room_name ,"ルーム名", class: "control-label required-a" %>

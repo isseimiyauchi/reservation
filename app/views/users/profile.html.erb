@@ -11,7 +11,7 @@
               <div class="form-group">
                       <h5 class="border-bottom">プロフィール</h5>
               </div>
-              <%= form_with model: current_user, url: user_profile_path(current_user), method: 'get', local: true do |f| %>
+              <%= form_with model: @user, url: root_path, method: 'get' do |f| %>
                   <div class="form-group">
                           <div class="col-md-6 offset-md-3">
                               <div class="icon-box">
